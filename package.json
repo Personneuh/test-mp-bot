@@ -1,0 +1,14 @@
+{
+  "name": "testdm",
+  "version": "1.0.0",
+  "description": "Un test pour les DM twitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sacha Marcus",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}

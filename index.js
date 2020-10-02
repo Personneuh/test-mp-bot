@@ -29,7 +29,7 @@ const researchedWord = "poulet"
 
 nbMess = 0
 
-setInterval(poster,1000*60)
+setInterval(poster,1000*60*60*6)
 
 function poster() {
     T.post("statuses/update",

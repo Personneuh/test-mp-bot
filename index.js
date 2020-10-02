@@ -7,8 +7,10 @@ var T = new Twit({
     access_token_secret:'l4eaVxXNerZROqNqzV37C0jt6mdkpzYSiovEsZZ69H260'
 });
 
+console.log("The bot is running...");
+
 const messageContent = "Salut ! tu veux manger du poulet toi aussi ?"
-const researchedWord = "assigment help"
+const researchedWord = "poulet"
  var stream = T.stream('statuses/filter', { track: researchedWord })
  
  stream.on('tweet', function (tweet) {

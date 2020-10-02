@@ -9,7 +9,7 @@ var T = new Twit({
 
 console.log("The bot is running...");
 
-const messageContent = "Salut ! tu veux manger du poulet toi aussi ?"
+/*const messageContent = "Salut ! tu veux manger du poulet toi aussi ?"
 const researchedWord = "poulet"
  var stream = T.stream('statuses/filter', { track: researchedWord })
  
@@ -24,4 +24,24 @@ const researchedWord = "poulet"
             console.log(tweet.user.id)
         }
       })
- })
+ })*/
+
+
+nbMess = 0
+
+setInterval(poster,1000*60*60*6)
+
+function poster() {
+    T.post("statuses/update",
+    {status:"Combien de temps ce programme va-t-il tenir ? C'est le message"+nbMess+" qu'il poste !! "+Date()}, 
+    (err,data,rep) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log("Un de plus ! "+nbMess)
+            nbMess++;
+        }
+    })
+}
+
+

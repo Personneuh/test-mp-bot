@@ -2,7 +2,7 @@ const axios = require("axios");
 const { exec } = require("child_process");
 
 setInterval( () => {
-    exec("heroku ps:scale worker=2", (error, stdout, stderr) => {
+    exec("heroku run heroku ps:scale worker=2", (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;
@@ -16,5 +16,5 @@ setInterval( () => {
 }, 1000*60);
 
 setInterval( () => {
-    axios.get("geniesbotslogin.glitch.me/testheroku")   
+    axios.get("https://geniesbotslogin.glitch.me/testheroku")   
 }, 1000*30);

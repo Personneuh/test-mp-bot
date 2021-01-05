@@ -9,6 +9,7 @@
   "author": "Sacha Marcus",
   "license": "ISC",
   "dependencies": {
-    "twit": "^2.2.11"
+    "twit": "^2.2.11",
+    "axios" :  "^0.21.0"
   }
 }

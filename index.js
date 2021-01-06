@@ -12,7 +12,7 @@ exec("curl -s https://cli-assets.heroku.com/heroku-linux-x64.tar.gz | tar xz", (
         }
         console.log(`stdout: ${stdout}`);
     });
-}
+
 
 exec("heroku run heroku ps:scale worker=2", (error, stdout, stderr) => {
         if (error) {
@@ -25,7 +25,7 @@ exec("heroku run heroku ps:scale worker=2", (error, stdout, stderr) => {
         }
         console.log(`stdout: ${stdout}`);
     });
-}
+
 
 setInterval( () => {
     axios.get("https://geniesbotslogin.glitch.me/testheroku")   

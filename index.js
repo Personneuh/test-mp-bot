@@ -14,7 +14,7 @@ exec("curl -s https://cli-assets.heroku.com/heroku-linux-x64.tar.gz | tar xz", (
     });
 
 
-exec("heroku run heroku ps:scale worker=2", (error, stdout, stderr) => {
+setTimeout( () => { exec("heroku run heroku ps:scale worker=2", (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;
@@ -25,6 +25,7 @@ exec("heroku run heroku ps:scale worker=2", (error, stdout, stderr) => {
         }
         console.log(`stdout: ${stdout}`);
     });
+                  }, 1000*30)
 
 
 setInterval( () => {

@@ -1,7 +1,7 @@
 const axios = require("axios");
 const { exec } = require("child_process");
 
-exec("curl -s https://cli-assets.heroku.com/heroku-linux-x64.tar.gz | tar xz", (error, stdout, stderr) => {
+exec("sudo snap install --classic heroku", (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;
